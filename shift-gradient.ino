@@ -8,6 +8,7 @@ CRGB leds[NUM_LEDS];
 uint8_t START_HUE = 0;
 uint8_t END_HUE = 123;
 
+// Set colors.
 CRGB START_COLOR = CRGB::Black;
 CRGB END_COLOR = CRGB::Black;
 

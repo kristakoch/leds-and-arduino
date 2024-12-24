@@ -5,6 +5,7 @@
 
 CRGB leds[NUM_LEDS];
 
+// Set colors.
 CRGB COLOR_ONE = CRGB::Magenta;
 CRGB COLOR_TWO = CRGB::Green;
 CRGB COLOR_THREE = CRGB::Yellow;

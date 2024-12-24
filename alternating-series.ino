@@ -5,8 +5,9 @@
 
 CRGB leds[NUM_LEDS];
 
-CRGB series[5] = {CRGB::DodgerBlue, CRGB::Red, CRGB::Yellow, CRGB::OrangeRed, CRGB::Green};
-int seriesLength = 5;
+// Set colors. Fix size.
+CRGB SERIES[5] = {CRGB::DodgerBlue, CRGB::Red, CRGB::Yellow, CRGB::OrangeRed, CRGB::Green};
+int SERIES_LEN = 5;
 
 void setup() {
   FastLED.addLeds<WS2811, LED_PIN, RGB>(leds, NUM_LEDS); // RGB is color order
@@ -20,7 +21,7 @@ void loop() {
   // after each run so the series will appear to shift across
   // the light string.
   for (int i = 0; i < NUM_LEDS; i++) {
-    leds[i] = series[i%5];
+    leds[i] = SERIES[i%5];
   }
 
   FastLED.show();
@@ -31,11 +32,11 @@ void loop() {
 
 
 void shiftSeries() {
-  CRGB first = series[0]; 
+  CRGB first = SERIES[0]; 
 
-  for (int i = 0; i < seriesLength - 1; i++) {
-    series[i] = series[i + 1];
+  for (int i = 0; i < SERIES_LEN - 1; i++) {
+    SERIES[i] = SERIES[i + 1];
   }
   
-  series[seriesLength - 1] = first;
+  SERIES[SERIES_LEN - 1] = first;
 }

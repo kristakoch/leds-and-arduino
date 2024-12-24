@@ -5,8 +5,9 @@
 
 CRGB leds[NUM_LEDS];
 
-CRGB laserColor = CRGB::Aquamarine;
-int tailLength = 10;
+// Set color and size.
+CRGB LASER_COLOR = CRGB::Aquamarine;
+int TAIL_LENGTH = 10;
 
 int start = 0;
 
@@ -25,13 +26,13 @@ void loop() {
 
   fill_solid(leds, NUM_LEDS, CRGB::Black);
 
-  if (start - tailLength > NUM_LEDS) {
+  if (start - TAIL_LENGTH > NUM_LEDS) {
     start = 0;
   }
 
-  CHSV hsv = getHSV(laserColor);
+  CHSV hsv = getHSV(LASER_COLOR);
 
-  for (int i = 1; i < tailLength; i++) {
+  for (int i = 1; i < TAIL_LENGTH; i++) {
     if (start - i > 0 && start - i < NUM_LEDS) {
       leds[start - i].setHSV(hsv.h, 255, hsv.v/i);
     }

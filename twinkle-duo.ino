@@ -5,11 +5,15 @@
 
 CRGB leds[NUM_LEDS];
 
+// Set colors.
+CRGB COLOR_ONE = CRGB::Green;
+CRGB COLOR_TWO = CRGB::Red;
+
 void setup() {
   FastLED.addLeds<WS2811, LED_PIN, RGB>(leds, NUM_LEDS); // RGB is color order
   FastLED.setBrightness(50); // 0-255
 
-  fill_gradient_RGB(leds, NUM_LEDS, CRGB::Green, CRGB::Red);
+  fill_gradient_RGB(leds, NUM_LEDS, COLOR_ONE, COLOR_TWO);
   FastLED.show();
 }
 
