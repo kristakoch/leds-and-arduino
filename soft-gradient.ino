@@ -6,9 +6,9 @@
 CRGB leds[NUM_LEDS];
 
 uint8_t START_HUE = 0;
-CRGB START_COLOR = CRGB::Black;
-
 uint8_t END_HUE = 123;
+
+CRGB START_COLOR = CRGB::Black;
 CRGB END_COLOR = CRGB::Black;
 
 
@@ -21,6 +21,10 @@ void loop() {
 
   // Shift a gradient between two colors by 
   // modifying the hue at each loop.
+  // 
+  // Both hue values are incremented together
+  // so making them closer will create a more 
+  // subtle color difference.
   START_COLOR.setHue(START_HUE);
   END_COLOR.setHue(END_HUE);
 
