@@ -12,7 +12,7 @@ void setup() {
 
 void loop() {
 
-  // set bulbs to alternating colors
+  // Set bulbs to alternating colors.
   for (int i = 0; i < NUM_LEDS; i++) {
     if (i % 2 == 0) {
       leds[i] = CRGB::FairyLight;
@@ -24,7 +24,7 @@ void loop() {
   FastLED.show();
   delay(250);
 
-  // do the opposite
+  // Now set them to the opposite for a zesty blink effect.
   for (int i = 0; i < NUM_LEDS; i++) {
     if (i % 2 != 0) {
       leds[i] = CRGB::FairyLight;

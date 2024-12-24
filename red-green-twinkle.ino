@@ -15,7 +15,8 @@ void setup() {
 
 void loop() {
 
-  // get a random bulb
+  // The light string is set to a gradient of red to green. 
+  // We'll pick a random light and dim it at random intervals.
   int rand_i = random(0, NUM_LEDS);
   CHSV hsv = getHue(leds[rand_i]);
 
@@ -40,7 +41,6 @@ void loop() {
     brightness += inc;
   }
 
-  // wait some amount of time
   int rand_d = random(0,750);
   delay(rand_d);
 }

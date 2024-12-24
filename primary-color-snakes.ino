@@ -14,21 +14,21 @@ void setup() {
 
 void loop() {
 
-  // set red
+  // Set the string to red bulb by bulb quickly.
   for (int i = 0; i < NUM_LEDS; i+=1) {
     leds[i] = CRGB::Red;
     FastLED.show();
     delay(25);
   }
   
-  // set yellow
+  // Now do the same for yellow.
   for (int i = 0; i < NUM_LEDS; i+=2) {
     leds[i] = CRGB::Gold;
     FastLED.show();
     delay(50);
   }
 
-  // set blue
+  // Now do the same for blue.
   for (int i = 0; i < NUM_LEDS; i+=3) {
     leds[i] = CRGB::Teal;
     FastLED.show();

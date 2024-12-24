@@ -14,6 +14,11 @@ void setup() {
 }
 
 void loop() {
+
+  // Set the full string of lights to the colors of the series
+  // in the order they were declared above. The series will shift 
+  // after each run so the series will appear to shift across
+  // the light string.
   for (int i = 0; i < NUM_LEDS; i++) {
     leds[i] = series[i%5];
   }

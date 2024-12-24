@@ -13,6 +13,9 @@ void setup() {
 }
 
 void loop() {
+
+  // Set the string of lights to a rainbow and make it undulate
+  // by shifting the starting hue by one each time the loop goes.
   fill_rainbow(leds, NUM_LEDS, startHue, 255/NUM_LEDS);
   FastLED.show();
   
