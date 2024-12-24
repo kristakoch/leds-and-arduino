@@ -5,9 +5,9 @@
 
 CRGB leds[NUM_LEDS];
 
-CRGB COLOR_ONE = CRGB::Red;
-CRGB COLOR_TWO = CRGB::Gold;
-CRGB COLOR_THREE = CRGB::Teal;
+CRGB COLOR_ONE = CRGB::Magenta;
+CRGB COLOR_TWO = CRGB::Green;
+CRGB COLOR_THREE = CRGB::Yellow;
 
 void setup() {
   FastLED.addLeds<WS2811, LED_PIN, RGB>(leds, NUM_LEDS); // RGB is color order
